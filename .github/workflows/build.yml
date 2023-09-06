@@ -34,7 +34,6 @@ jobs:
       - uses: docker/build-push-action@v4
         with:
           context: .
-          file: typesense.Dockerfile
           build-args: GIT_SHA={{ github.sha }}
           push: true
           cache-from: type=gha
